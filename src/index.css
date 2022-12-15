@@ -14,3 +14,28 @@ code {
 p{
   color: black;
 }
+
+.add-btn{
+  padding: 8px 20px;
+  cursor: pointer;
+  background-color: #00AB66;
+  border: 0;
+  border-radius: 4px;
+  color: white;
+}
+.add-btn:hover{
+  background-color: #007948;
+  transition: all 0.5s;
+}
+.delete-btn{
+  padding: 8px 20px;
+  cursor: pointer;
+  background-color: #D11A2A;
+  border: 0;
+  border-radius: 4px;
+  color: white;
+}
+.delete-btn:hover{
+  background-color: #7A1012;
+  transition: all 0.5s;
+}

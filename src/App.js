@@ -699,9 +699,9 @@ function App() {
 ])
   const [loading, setLoading] = useState(false)
 
-  const deleteRow = (index) => {
-    setData(data.filter((v, i) => index !== i));
-    console.log(data)
+  const deleteRow = (index,e) => {
+    setData(data.filter((i) => index !== i.id));
+    console.log(index)
 
   }
 
@@ -735,13 +735,13 @@ function App() {
       selector: (row) => row.address.city,
     },
     {
-      cell:(row) => <button  id={row.id}>Add</button>,
+      cell:(row) => <button className='add-btn'>Add</button>,
       ignoreRowClick: true,
       allowOverflow: true,
       button: true,
     },
     {
-      cell:(row) => <button  id={row.id} onClick={() => deleteRow(row.id)}>Delete</button>,
+      cell:(row) => <button className='delete-btn' onClick={(e) => deleteRow(row.id,e)}>Delete</button>,
       ignoreRowClick: true,
       allowOverflow: true,
       button: true,
